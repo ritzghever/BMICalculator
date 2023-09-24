@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import BMICalculatorForm from './app/components/BMICalculatorForm';
+export default class App extends React.Component {
+  render(){
+    return (
+      <View style={styles.container}>
+
+        <BMICalculatorForm />
+        
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#16161d',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingLeft: 50,
+    paddingRight: 50
   },
 });
